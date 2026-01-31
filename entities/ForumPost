@@ -1,0 +1,72 @@
+{
+  "name": "ForumPost",
+  "type": "object",
+  "properties": {
+    "anonymous_name": {
+      "type": "string",
+      "description": "Generated anonymous display name"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "academic_stress",
+        "loneliness",
+        "family_issues",
+        "anxiety",
+        "general",
+        "relationships",
+        "self_discovery"
+      ],
+      "description": "Forum category"
+    },
+    "title": {
+      "type": "string",
+      "description": "Post title"
+    },
+    "content": {
+      "type": "string",
+      "description": "Post content"
+    },
+    "reactions": {
+      "type": "object",
+      "properties": {
+        "heart": {
+          "type": "number",
+          "default": 0
+        },
+        "hug": {
+          "type": "number",
+          "default": 0
+        },
+        "same": {
+          "type": "number",
+          "default": 0
+        },
+        "strength": {
+          "type": "number",
+          "default": 0
+        }
+      },
+      "description": "Empathetic reactions"
+    },
+    "is_flagged": {
+      "type": "boolean",
+      "default": false,
+      "description": "Flagged for moderation"
+    },
+    "moderation_status": {
+      "type": "string",
+      "enum": [
+        "approved",
+        "pending",
+        "removed"
+      ],
+      "default": "approved"
+    }
+  },
+  "required": [
+    "category",
+    "title",
+    "content"
+  ]
+}

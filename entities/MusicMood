@@ -1,0 +1,46 @@
+{
+  "name": "MusicMood",
+  "type": "object",
+  "properties": {
+    "song_title": {
+      "type": "string",
+      "description": "Song title"
+    },
+    "artist": {
+      "type": "string",
+      "description": "Artist name"
+    },
+    "why_resonates": {
+      "type": "string",
+      "description": "Why this song resonates"
+    },
+    "detected_mood": {
+      "type": "string",
+      "description": "AI-detected mood from song"
+    },
+    "ai_insight": {
+      "type": "string",
+      "description": "AI-generated insight"
+    },
+    "suggested_songs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "artist": {
+            "type": "string"
+          },
+          "mood": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "song_title"
+  ]
+}

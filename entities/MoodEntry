@@ -1,0 +1,59 @@
+{
+  "name": "MoodEntry",
+  "type": "object",
+  "properties": {
+    "mood": {
+      "type": "string",
+      "enum": [
+        "joyful",
+        "calm",
+        "neutral",
+        "anxious",
+        "sad",
+        "overwhelmed",
+        "hopeful",
+        "tired"
+      ],
+      "description": "Primary mood selection"
+    },
+    "intensity": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Intensity of the mood"
+    },
+    "journal_entry": {
+      "type": "string",
+      "description": "Optional journal text"
+    },
+    "journal_type": {
+      "type": "string",
+      "enum": [
+        "quick_note",
+        "reflection"
+      ],
+      "description": "Type of journal entry"
+    },
+    "activities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Activities that influenced mood"
+    },
+    "ai_sentiment": {
+      "type": "string",
+      "description": "AI-analyzed sentiment"
+    },
+    "ai_themes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "AI-detected emotional themes"
+    }
+  },
+  "required": [
+    "mood"
+  ]
+}

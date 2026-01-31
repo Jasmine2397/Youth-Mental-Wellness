@@ -1,0 +1,59 @@
+{
+  "name": "Expert",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Expert's display name"
+    },
+    "title": {
+      "type": "string",
+      "description": "Professional title"
+    },
+    "specializations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Areas of expertise"
+    },
+    "bio": {
+      "type": "string",
+      "description": "Short biography"
+    },
+    "avatar_url": {
+      "type": "string",
+      "description": "Profile image URL"
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "availability": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Available time slots"
+    },
+    "rating": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 5
+    },
+    "sessions_completed": {
+      "type": "number"
+    },
+    "is_verified": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "name",
+    "title",
+    "specializations"
+  ]
+}

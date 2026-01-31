@@ -1,0 +1,39 @@
+{
+  "name": "ForumComment",
+  "type": "object",
+  "properties": {
+    "post_id": {
+      "type": "string",
+      "description": "Parent post ID"
+    },
+    "anonymous_name": {
+      "type": "string",
+      "description": "Generated anonymous display name"
+    },
+    "content": {
+      "type": "string",
+      "description": "Comment content"
+    },
+    "reactions": {
+      "type": "object",
+      "properties": {
+        "heart": {
+          "type": "number",
+          "default": 0
+        },
+        "hug": {
+          "type": "number",
+          "default": 0
+        }
+      }
+    },
+    "is_flagged": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "post_id",
+    "content"
+  ]
+}

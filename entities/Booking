@@ -1,0 +1,42 @@
+{
+  "name": "Booking",
+  "type": "object",
+  "properties": {
+    "expert_id": {
+      "type": "string",
+      "description": "Expert's ID"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Booking date"
+    },
+    "time_slot": {
+      "type": "string",
+      "description": "Selected time slot"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "confirmed",
+        "completed",
+        "cancelled"
+      ],
+      "default": "pending"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional notes for the session"
+    },
+    "is_anonymous": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "expert_id",
+    "date",
+    "time_slot"
+  ]
+}

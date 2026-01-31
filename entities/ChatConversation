@@ -1,0 +1,33 @@
+{
+  "name": "ChatConversation",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Conversation title"
+    },
+    "last_message_preview": {
+      "type": "string",
+      "description": "Preview of last message"
+    },
+    "emotional_state": {
+      "type": "string",
+      "description": "Detected emotional state"
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": [
+        "none",
+        "low",
+        "moderate",
+        "high"
+      ],
+      "default": "none"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": []
+}
